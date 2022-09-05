@@ -32,6 +32,7 @@ RUN         apk add --update --no-cache cmake make ca-certificates curl ffmpeg g
 
 USER        container
 ENV         USER=container HOME=/home/container
+ENV			LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
