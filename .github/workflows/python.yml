@@ -31,8 +31,8 @@ jobs:
       - uses: docker/login-action@v1
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: deathpleiad
+          password: ${{ secrets.dockpass }}
       - uses: docker/build-push-action@v2
         with:
           context: ./python
